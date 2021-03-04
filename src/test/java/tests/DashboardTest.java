@@ -8,7 +8,7 @@ import pages.DashBoardPage;
 public class DashboardTest extends TestBase {
 
 	@Test
-	public void initialization() throws Exception {
+	public void initialPage() throws Exception {
 		DashBoardPage dash = PageFactory.initElements(driver, DashBoardPage.class);
 		dash.headerTest();
 		dash.checkImage();

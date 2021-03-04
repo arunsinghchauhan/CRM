@@ -21,8 +21,6 @@ public class DashBoardPage extends TestBase {
 
 	@FindBy(xpath = "//a[text()='About']")
 	WebElement aboutLink;
-	@FindBy(xpath = "//a[text()='Zoom Video']")
-	WebElement zoomLink;
 	@FindBy(xpath = "//a[text()='Compare']")
 	WebElement compareLink;
 	@FindBy(xpath = "//a[text()='Pricing']")
@@ -66,14 +64,6 @@ public class DashBoardPage extends TestBase {
 		assertEquals("PRICING", price);
 		System.out.println("Price link assertion pass");
 
-		zoomLink.click();
-		ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
-		driver.switchTo().window(tabs2.get(1));
-		driver.close();
-		driver.switchTo().window(tabs2.get(0));
-		String zoom = zoomLink.getText();
-		assertEquals("ZOOM VIDEO", zoom);
-		System.out.println("Zoom Video link assertion pass");
 
 		appsDropdown.click();
 		String apps = appsText.getText();
