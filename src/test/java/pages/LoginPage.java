@@ -36,7 +36,7 @@ public class LoginPage extends TestBase{
 	
 	public void EnterEmailAndPassword()
 	{
-		emailTextField.sendKeys("arun.chauhan000@gmail.com");
+		emailTextField.sendKeys("arun.chauhan008@gmail.com");
 		password.sendKeys("Qait@123");
 		login.click();
 		
